@@ -20,7 +20,7 @@ const favoritesReducer = (state = initialState, action) => {
     case REMOVE_FAVORITE: {
       return {
         ...state,
-        favorites: state.filter((item) => {
+        favorites: state.favorites.filter((item) => {
           item.id !== action.payload;
         }),
       };
